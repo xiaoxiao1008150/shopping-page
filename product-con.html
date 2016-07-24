@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>购物网站</title>
+<meta name="Keywords" content="智能家居平台" />
+<meta name="Description" content="专业提供家庭智能化服务平台" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.js"></script>
+<script type="text/javascript" src="js/porduct-lib.js"></script>
+<script type="text/javascript" src="js/jqueryzoom.js"></script>
+<script type="text/javascript" src="js/posfixed.js"></script>
+</head>
+<body>
+<!-- header start -->
+  <div class="header">
+    <div class="header-top">
+      <div class="wrap1200 top"><a href="login.html">登陆</a>/<a href="reg.html">免费注册</a>|<a href="shopping-infor.html">我的订单</a>|<a href="">个人中心</a>|<a href="shopping-car.html">我的购物车</a></div>
+    </div>
+    <div class="wrap1200 wrap">
+        <div class="logo"> <a href="/" class="logo-a"><img src="images/logo.png" width="240" height="46" alt="NX管家logo"/></a></div>
+        <div class="nav">
+          <ul>
+             <li><a href="index.html">首页</a></li>
+              <li><a href="product-list.html" class="on">产品</a></li>
+              <li><a href="news-list.html">资讯</a></li>
+              <li><a href="help-center.html">服务</a></li>
+              <li><a href="appraisal-list.html">测评</a></li>
+              <li><a href="about-us.html">社区</a></li>
+          </ul>  
+        </div>
+        <div class="search">
+          <input type="search" class="search-input">
+          <input type="image" src="images/search-magnifier.png" width="29" height="29" alt="Submit" class="search-but">
+        </div>
+    </div>
+  </div>
+  <!--header end --> 
+  <div class="main">
+    <div class="wrap1200">
+      <div class="product-con">
+        <div id="prod-tab">
+          <ul>
+            <li><a href="" class="red">立即购买</a></li>
+            <li><a href="#tab3" class="selected">商品评论</a></li>
+            <li><a href="#tab2">规格参数</a></li>          
+            <li><a href="#tab1">详细介绍</a></li>
+          </ul>
+        </div>
+ <!--info start-->
+          <div class="info">
+            <!-- img show --> 
+            <div id="preview">
+                <div class="jqzoom" id="spec-n1" onClick="window.open('http://www.nxguanjia.com/')">
+                  <img src="tmp_img/img02.jpg" jqimg="tmp_img/img04.jpg" width="490"  height="490" >
+                </div>
+                <div id="spec-n5">
+                    <div class="control" id="spec-left">
+                        <img src="images/left.gif" />
+                    </div>
+                    <div id="spec-list">
+                        <ul class="list-h">
+                            <li><img src="tmp_img/img01.jpg"> </li>
+                            <li><img src="tmp_img/img02.jpg"> </li>
+                            <li><img src="tmp_img/img03.jpg"> </li>
+                            <li><img src="tmp_img/img04.jpg"> </li>
+                            <li><img src="tmp_img/img01.jpg"> </li>
+                            <li><img src="tmp_img/img02.jpg"> </li>
+                            <li><img src="tmp_img/img03.jpg"> </li>
+                            <li><img src="tmp_img/img04.jpg"> </li>
+                            <li><img src="tmp_img/img01.jpg"> </li>
+                            <li><img src="tmp_img/img02.jpg"> </li>
+                            <li><img src="tmp_img/img03.jpg"> </li>
+                            <li><img src="tmp_img/img04.jpg"> </li>
+                        </ul>
+                    </div>
+                    <div class="control" id="spec-right">
+                        <img src="images/right.gif" />
+                    </div>
+                    
+                </div>
+                <div class="product-id">商品编号：XB-8573</div>
+            </div>
+            <script type=text/javascript>
+                $(function(){			
+                   $(".jqzoom").jqueryzoom({
+                        xzoom:500,
+                        yzoom:500,
+                        offset:10,
+                        position:"right",
+                        preload:1,
+                        lens:1
+                    });
+                    $("#spec-list").jdMarquee({
+                        deriction:"left",
+                        width:490,
+                        height:56,
+                        step:2,
+                        speed:4,
+                        delay:10,
+                        control:true,
+                        _front:"#spec-right",
+                        _back:"#spec-left"
+                    });
+                    $("#spec-list img").bind("mouseover",function(){
+                        var src=$(this).attr("src");
+                        $("#spec-n1 img").eq(0).attr({
+                            src:src.replace("\/n5\/","\/n1\/"),
+                            jqimg:src.replace("\/n5\/","\/n0\/")
+                        });
+                        $(this).css({
+                            "border":"2px solid #ff6600",
+                            "padding":"1px"
+                        });
+                    }).bind("mouseout",function(){
+                        $(this).css({
+                            "border":"1px solid #ccc",
+                            "padding":"2px"
+                        });
+                    });				
+                })
+            </script>
+            <!-- img show end-->
+            <div class="info-r">
+              <h1 class="title">ZigBee凌志系列智能控制面板ZigBee凌志系列智能控制面板</h1>
+              <div class="subtitle">外形时尚又具科技感，超薄机身，锌、铝合金外壳高端雅致。配合支架可立卧两式充电，超大镜面，独有的三线圈设计，增加感应范围，手机横竖都可以在感应范围内充电，十分方便。</div>
+              <div class="serve">服 务：由厂家直接发货并提供服务。</div>
+              <div class="serve">运 费：支持99免运费。</div>
+
+                <div class="propertySelect" id="propertySelect">
+                    <span class="fl">版本：</span>
+                    <div class="attr" id="attr_218">
+
+                        <a class="null" title="无货" style="cursor: no-drop">
+                            <p class="txt">
+                                8700油烟机                                <i></i>
+                            </p>
+                        </a>
+                        <a class="hover " hidefocus="true" href="javascript:;" rev="rel=zoom" title="8700+油烟机+33B0燃气灶套装，加￥3980.00元" style="cursor:pointer" name="spec_a_218" onclick="changeAtt(this,377,218)">
+                            <p class="txt">
+                                8700+油烟机+33B0燃气灶套装                                                                <i></i>
+                            </p>
+                            <input style="display:none" id="spec_value_377" type="radio" name="spec_218" value="377">
+                        </a>
+                        <input type="hidden" name="spec_list" value="4">
+                    </div>
+                    <div class="blank"></div>
+
+                </div>
+              <div class="price">价格：<span>¥900.00</span></div>
+              <div class="quantity">
+                  <div class="wrap-input">
+                      <input type="text" class="num" value="1"/>
+                      <a href="javascript:;" class="btn-reduce">-</a>
+                      <a href="javascript:;" class="btn-add">+</a>
+                  </div>
+                  <script type="text/javascript">  
+                       $(document).ready(function(){  
+                     var add,reduce,num,num_txt;  
+                     add=$(".btn-add");//添加数量  
+                     reduce=$(".btn-reduce");//减少数量  
+                     num="";//数量初始值  
+                     num_txt=$(".num");//接受数量的文本框     
+                     //var num_val=num_txt.val();//给文本框附上初始值  
+                       
+                     /*添加数量的方法*/  
+                     add.click(function(){  
+                       num = $(".num").val();      
+                       num++;  
+                       num_txt.val(num);  
+                       //ajax代码可以放这里传递到数据库实时改变总价  
+                      });  
+                        
+                     /*减少数量的方法*/   
+                     reduce.click(function(){  
+                      //如果文本框的值大于0才执行减去方法  
+                          num = $(".num").val();  
+                       if(num >0){  
+                        //并且当文本框的值为1的时候，减去后文本框直接清空值，不显示0  
+                        if(num==1)  
+                        { num--;  
+                         num_txt.val("1");  
+                        }  
+                        //否则就执行减减方法  
+                        else  
+                        {  
+                         num--;  
+                         num_txt.val(num);  
+                        }  
+                      
+                       }  
+                      });  
+                    })  
+                  </script>  
+              </div>
+              <div class="add-to-cart"><a href="shopping-infor.html"><img src="images/add-to-cart.gif" width="135" height="36" alt="加入购物车"/></a></div>
+            </div>
+            <!-- info-r end-->
+         </div>
+ <!--info end-->
+        <div class="sidebar">
+          <dl>
+            <dt>热销排行</dt>
+            <dd>
+              <a href=""><img src="tmp_img/product-pro-list.jpg" alt=""></a>
+              <a href="">Apple iPhone 6s Plus (A1699) 64G 玫瑰金色 移动联通电信4G手机</a>
+              <span class="jiage">¥699.00</span>
+            </dd>
+            <dd>
+              <a href=""><img src="tmp_img/product-pro-list.jpg" alt=""></a>
+              <a href="">Apple iPhone 6s Plus (A1699) 64G 玫瑰金色 移动联通电信4G手机</a>
+              <span class="jiage">¥699.00</span>
+            </dd>
+            <dd>
+              <a href=""><img src="tmp_img/product-pro-list.jpg" alt=""></a>
+              <a href="">Apple iPhone 6s Plus (A1699) 64G 玫瑰金色 移动联通电信4G手机</a>
+              <span class="jiage">¥699.00</span>
+            </dd>
+          </dl>
+          
+          <dl>
+            <dt>热销排行</dt>
+            <dd>
+              <a href=""><img src="tmp_img/product-pro-list.jpg" alt=""></a>
+              <a href="">Apple iPhone 6s Plus (A1699) 64G 玫瑰金色 移动联通电信4G手机</a>
+              <span class="jiage">¥699.00</span>
+            </dd>
+            <dd>
+              <a href=""><img src="tmp_img/product-pro-list.jpg" alt=""></a>
+              <a href="">Apple iPhone 6s Plus (A1699) 64G 玫瑰金色 移动联通电信4G手机</a>
+              <span class="jiage">¥699.00</span>
+            </dd>
+            <dd>
+              <a href=""><img src="tmp_img/product-pro-list.jpg" alt=""></a>
+              <a href="">Apple iPhone 6s Plus (A1699) 64G 玫瑰金色 移动联通电信4G手机</a>
+              <span class="jiage">¥699.00</span>
+            </dd>
+          </dl>
+    
+        </div>
+        <!--sid end-->
+        <div class="content">
+          <div id="tab1"><h3 class="h3title">详细介绍</h3> 产品详情---具体内容</div> 
+          <div id="tab2"><h3 class="h3title">规格参数</h3> 产品参数----具体内容显示</div>
+          <div id="tab3"><h3 class="h3title">商品评论</h3>
+
+               <div class="tab3wrapper">
+
+                  <div class="ypj">
+                      <p>用户评价：  <span>(共 <i style="font-style:normal;">5</i>条评价）</span></p>
+                      <div class="p2"><span class="fl">产品星级评级：</span>
+                          <ul class="star fl">
+                              <li class="on"></li>
+                              <li class=""></li>
+                              <li class=""></li>
+                              <li class=""></li>
+                              <li class=""></li>
+                          </ul>
+                          <span class="fr time">09:06:12</span><span class="fr time" >2016-5-13</span><div class="clear"></div></div>
+                      <div class="p3">
+                          <span class="fl customer-name">住五楼的兔子：</span>
+                          <div class="fl" style="width:868px;">设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，设计很新颖，很好用，满意，给家里
+                              换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家
+                              都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~。
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+                      <div class="p4"><span class="fl" style="width:75px;">管理员回复 :</span><div class="fl" style="width:868px;">让亲满意是我们最大的荣欣，以后我们会继续努力的，感谢亲的购买和评价~~让亲满意是我们最大的荣欣，以后我们会继续努力的，感谢亲的购买和评价~~让亲满意是我们最大的荣欣，以后我们会继续努力的，感谢亲的购买和评价~~让亲满意是我们最大的荣欣，以后我们会继续努力的，感谢亲的购买和评价~~ </div><div class="clear"></div></div>
+
+
+                  </div>
+                  <div class="ypj">
+                      <div class="p2"><span class="fl">产品星级评级：</span>
+                          <ul class="star fl">
+                              <li class="on"></li>
+                              <li class="on"></li>
+                              <li class=""></li>
+                              <li class=""></li>
+                              <li class=""></li>
+                          </ul>
+                          <span class="fr time">09:06:12</span><span class="fr time">2016-5-13</span><div class="clear"></div></div>
+                      <div class="p3">
+                          <span class="fl customer-name">住五楼的兔子：住五楼的兔子：住五楼的兔子：</span>
+                          <div class="fl" style="width:868px;">设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，设计很新颖，很好用，满意，给家里
+                              换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家
+                              都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~。很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~。
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+                      <div class="p4"><span class="fl" style="width:75px;">管理员回复 :</span><div class="fl" style="width:868px;">让亲满意是我们最大的荣欣，以后我们会继续努力的，感谢亲的购买和评价~~ </div><div class="clear"></div></div>
+
+
+                  </div>
+                  <div class="ypj">
+                      <div class="p2"><span class="fl">产品星级评级：</span>
+                          <ul class="star fl">
+                              <li class="on"></li>
+                              <li class="on"></li>
+                              <li class="on"></li>
+                              <li class=""></li>
+                              <li class=""></li>
+                          </ul>
+                          <span class="fr time">09:06:12</span><span class="fr time">2016-5-13</span><div class="clear"></div></div>
+                      <div class="p3">
+                          <span class="fl customer-name">住五楼的兔子：住五楼的兔子：住五楼的兔子：</span>
+                          <div class="fl" style="width:868px;">设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，设计很新颖，很好用，满意，给家里
+                              换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家
+                              都换上了，棒棒哒~~~设计很新颖，很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~。很好用，满意，给家里都换上了，棒棒哒设计很新颖，很好用，满意，给家里都换上了，棒棒哒~~~。
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+                      <div class="p4"><span class="fl" style="width:75px;">管理员回复 :</span><div class="fl" style="width:868px;">让亲满意是我们最大的荣欣，以后我们会继续努力的，感谢亲的购买和评价~~ </div><div class="clear"></div></div>
+
+
+                  </div>
+
+                  <div class="page-choose fr">
+                      <div id="Pagination" class="fl">
+                          <div class="pagination">
+                              <a href="#" class=" prev"><</a>
+                              <a href="#" class="current">1</a>
+                              <a href="#">2</a>
+                              <a href="#">3</a>
+                              <a href="#">4</a>
+                              <span class="pagination-break">...</span>
+                              <a href="#" class="ep">15</a>
+                              <a href="#" class="next" style="border-right:1px solid #ccc;">></a>
+                          </div>
+                      </div>
+                      <div class="searchPage fl">
+                          <span class="page-sum">共<strong class="allPage">15</strong>页</span>
+                          <span class="page-go">跳转<input type="text">页</span>
+                          <a href="javascript:;" class="page-btn">确定</a>
+                      </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="yhsc">
+                      <div><div class="yhsc-span fl" style="letter-spacing:3px;">用户名 ：</div> <div class="fl">住五楼的兔子</div><div class="clear"></div></div>
+                      <div><div class="yhsc-span fl">产品打分 ：</div>
+                          <div id="star" style="float:left;">
+                              <span></span>
+                              <ul>
+                                  <li><a href="javascript:;">1</a></li>
+                                  <li><a href="javascript:;">2</a></li>
+                                  <li><a href="javascript:;">3</a></li>
+                                  <li><a href="javascript:;">4</a></li>
+                                  <li><a href="javascript:;">5</a></li>
+                              </ul>
+                              <span></span>
+                              <p></p>
+                          </div><!--star end-->
+                          <div class="clear"></div>
+                      </div>
+                      <div id="evaluate-text"><span class="yhsc-span"> 评价内容 ：</span><textarea name="" id="" cols="30" rows="10" maxlength="500"></textarea></div>
+                      <div id="vertify-code"><span class="yhsc-span">验 证 码 ：</span><input type="text"><span class="green"></span></div>
+                      <button>提交评价</button>
+                  </div>
+               </div>
+
+
+
+          </div>
+        </div>
+	  <script type="text/javascript"> 
+        $("#prod-tab ul").idTabs(); 
+        //$('a').bind('focus',function(){if(this.blur){ this.blur();}});//去除A链接虚线
+		$(function(){
+			$('#prod-tab').posfixed({
+				distance : 0,
+				pos : 'top',
+				type : 'while',
+				hide : false
+			});
+		
+			$('.gotop').posfixed({
+				distance : 10,
+				direction : 'bottom',
+				type : 'always',
+				tag : {
+					obj : $('.wrap'),
+					direction : 'right',
+					distance : 10
+				},
+				hide : true
+			});
+		});
+      </script>
+      </div>
+      <a href="#" class="gotop">返回顶部</a>
+    </div>  
+  </div>
+  <!-- main end --> 
+  <!-- footer -->  
+  <div class="footer">
+    <div class="wrap1200">
+      <div class="footer-logo"><img src="images/logo.png" width="183" height="35" class="logoimg"></div>
+      <div class="footer-nav">
+        <h3>站点导航</h3>
+          <a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a>
+      </div>
+      <div class="partner">
+        <h3>合作伙伴</h3>
+          <a href="#">小米（MI）</a><a href="#">微插座（atsmart）</a><a href="#">飞利浦（PHILIPS）</a><a href="#">海尔（Haier）</a><a href="#">欧瑞博（ORVIBO）</a><a href="#">物联传感（WuLian）</a>
+      </div>
+      <div class="help">
+        <div class="server">
+          <h3>客户服务</h3>
+            <a href="#">服务保障</a><a href="#">售后服务</a><a href="#">购物指南</a><a href="#">支付配送</a><a href="#">包邮政策</a><a href="#">常见问题</a>
+        </div>
+        <div class="tel"> 4008-128-116 <span>向未来生活跑步前进!</span></div>
+      </div>
+      <div class="copyright">
+        <div class="l">NX管家网 国内最专业的智能家居平台! 五年来一直为智能生活跑步前进不断努力着!<br/><a href="#">陕ICP备11007503号-1</a> \ Powered by © 2011-2016 NXguanjia.com </div>
+        <div class="r"><a href="#">平台介绍</a>|<a href="#">加入我们</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- footer end-->
+
+<script>
+    //星星评分
+
+    window.onload = function (){
+
+        var oStar = document.getElementById("star");
+        var aLi = oStar.getElementsByTagName("li");
+        var oUl = oStar.getElementsByTagName("ul")[0];
+        var oSpan = oStar.getElementsByTagName("span")[1];
+        var oP = oStar.getElementsByTagName("p")[0];
+        var i = iScore = iStar = 0;
+        var aMsg = [
+            "很不满意|差得太离谱，与商家描述的严重不符，非常不满",
+            "不满意|部分有破损，与商家描述的不符，不满意",
+            "一般|质量一般，没有商家描述的那么好",
+            "满意|质量不错，与商家描述的基本一致，还是挺满意的",
+            "非常满意|质量非常好，与商家描述的完全一致，非常满意"
+        ];
+
+        for (i = 1; i <= aLi.length; i++){
+            aLi[i - 1].index = i;
+
+            //鼠标移过显示分数
+            aLi[i - 1].onmouseover = function (){
+                fnPoint(this.index);
+                //浮动层显示
+                oP.style.display = "block";
+                //计算浮动层位置
+                oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
+                //匹配浮动层文字内容
+                oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+            };
+
+            //鼠标离开后恢复上次评分
+            aLi[i - 1].onmouseout = function (){
+                fnPoint();
+                //关闭浮动层
+                oP.style.display = "none"
+            };
+
+            //点击后进行评分处理
+            aLi[i - 1].onclick = function (){
+                iStar = this.index;
+                oP.style.display = "none";
+                oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
+            }
+        }
+
+        //评分处理
+        function fnPoint(iArg){
+            //分数赋值
+            iScore = iArg || iStar;
+            for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
+        }
+
+    };
+
+   
+    $(function () {
+        //分页切换
+
+        $('.pagination a').on('mouseover',function () {
+            $(this).addClass('current1');
+
+        }).on('mouseout',function(){
+            $(this).removeClass('current1');
+
+        });
+
+        $('.pagination a').on('click',function (e) {
+            e.preventDefault();
+            $(this).addClass('current').siblings('.current').removeClass('current');
+
+        })
+  //颜色切换
+        $('#propertySelect a').bind('mouseover',function () {
+            $(this).children('p').css({"border":"2px solid #cd0010"});
+            $(this).css({"border":"1px solid #fff"});
+
+        }).bind('mouseout',function(){
+            $(this).children('p').css({"border":"2px solid #fff"});
+            $(this).css({"border":"1px solid #ccc"});
+
+
+        })
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>购物网站</title>
+    <meta name="Keywords" content="智能家居平台" />
+    <meta name="Description" content="专业提供家庭智能化服务平台" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" href="css/shopping-calculate.css"/>
+    <script type="text/javascript" src="js/shopping-calculate.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+</head>
+<body>
+<!-- header start -->
+    <div id="shadow"></div>
+
+<div class="header">
+    <div class="header-top">
+        <div class="wrap1200 top"><a href="login.html">登陆</a>/<a href="reg.html">免费注册</a>|<a href="shopping-infor.html">我的订单</a>|<a href="">个人中心</a>|<a href="shopping-car.html">我的购物车</a></div>
+    </div>
+    <div class="wrap1200 wrap">
+        <!--//购物车详情-->
+        <div class="logo"><a href="/" class="logo-a"><img src="images/logo.png" width="240" height="46" alt="NX管家logo"/></a>
+        </div>
+        <div class="nav">
+            <ul>
+              <li><a href="index.html">首页</a></li>
+              <li><a href="product-list.html" class="on">产品</a></li>
+              <li><a href="news-list.html">资讯</a></li>
+              <li><a href="help-center.html">服务</a></li>
+              <li><a href="appraisal-list.html">测评</a></li>
+              <li><a href="about-us.html">社区</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="search-input">
+            <input type="image" src="images/search-magnifier.png" width="29" height="29" alt="Submit"
+                   class="search-but">
+        </div>
+        <!--//购物车详情-->
+
+    </div>
+</div>
+<!--header end -->
+<div class="main">
+
+    <div class="wrap1200" style="margin-bottom:50px;">
+        <!-- content begin -->
+        <div class="">
+            <div style="margin:20px 0">
+                当前位置: <a href="index.html">首页</a> <code>&gt;</code> 购物流程
+            </div>
+
+            <div class="catbox">
+                <table id="cartTable">
+                    <thead>
+                    <tr style="height:38px;">
+                        <th style="width:28px;"></th>
+                        <th style="width:118px;">商品列表</th>
+                        <th style="width:368px;"></th>
+                        <th style="width:188px;"> 属性</th>
+                        <th style="width:148px;">单价（元）</th>
+                        <th style="width:128px;">数量</th>
+                        <th style="width:104px;">小计</th>
+                        <th style="width:108px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cartTbody">
+                    <tr>
+                        <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+                        <td class="goods" style="padding-top:0;"><div><img src="images/goods1.png" alt=""/></div></td>
+                        <td class="text_left"><span>郎空超级空气净化器 KJFA500</span></td>
+                        <td>颜色：黑色超级净化版</td>
+                        <td class="price">5999.88</td>
+                        <td class="count"><span class="reduce"></span>
+                            <input class="count-input" type="text" value="1"/>
+                            <span class="add">+</span></td>
+                        <td class="subtotal">5999.88</td>
+                        <td class="operation"><span class="delete">删除</span></td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+                        <td class="goods" style="padding-top:0;"><div><img src="images/goods1.png" alt=""/></div></td>
+                        <td class="text_left"><span>郎空超级空气净化器 KJFA500</span></td>
+                        <td>颜色：黑色超级净化版</td>
+                        <td class="price">5999.88</td>
+                        <td class="count"><span class="reduce"></span>
+                            <input class="count-input" type="text" value="1"/>
+                            <span class="add">+</span></td>
+                        <td class="subtotal">5999.88</td>
+                        <td class="operation"><span class="delete">删除</span></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="foot" id="foot">
+                    <label class="fl select-all"><input type="checkbox" class="check-all check"/><span style="margin-left:5px;height:48px;line-height:48px;display:inline-block;">全选</span></label>
+                    <a class="fl delete" id="deleteAll" href="javascript:;">删除选中商品</a>
+                    <a class="fl">更新购物车</a>
+                    <a href="shopping-car.html" class="fr closing"><span style="height:25px;position: relative;bottom: 10px;">结 算</span></a>
+                    <input type="hidden" id="cartTotalPrice" />
+                    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+                    <div class="fr selected" id="selected">已选商品<span id="selectedTotal">4</span>件</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- content end -->
+            <!--login begin-->
+            <div class="reg" id="login" style="float:none;width:350px;display:none;">
+                <div class="t1 "><span class="fl">欢迎回来 </span><span><a class="fr" href="">立即注册&gt;&gt;</a></span><div class="clear"></div></div>
+                <div class="f1 login"><span class="text-t user fl" ></span><input type="text"  name="" class="fl"></div>
+                <div class="f1 login"><span class="text-t password fl"></span><input type="password" class="fl" name=""></div>
+                <div class="f1 zcxy recheck" style="line-height:0;"><label><input class="" type="checkbox" checked="checked" value="1" name="" style="width:18px;height:13px;padding:0;border:none;"><span class="" >记住密码</span><a href="" class="wjmm">忘记密码？</a></label></div>
+                <div class="f1 login"><a href="" class="ljzc-1"> 登 &nbsp;&nbsp; 陆</a></div>
+                <div class="third_account"><span>使用第三方账号登录：</span><a href="" class="qq"><img src="images/qq.png" alt=""></a><a href="" class="wx"><img src="images/wx.png" alt=""></a></div>
+            </div>
+            <!--login end-->
+            <!--reg begin-->
+            <div class="reg" id="reg" style="float:none;width:350px;display:none;">
+                <form action="user.php" method="post" name="formUser" onsubmit="return register();">
+                    <div class="t1"><span class="fl">欢迎光临</span> <a class="fr" href="user.php">立即登录&gt;&gt;</a><div class="clear"></div></div>
+                    <div class="f1" style="width:435px;"><span class="text-t fl">用 户 名</span><input style="height:39px;"name="username" type="text" size="25" id="username" onblur="is_registered(this.value);" class="inputBg fl"><div class="text-tx clear" id="username_notice"></div></div>
+
+                    <div class="f1"><span class="text-t fl">设置密码</span><input style="height:39px;" name="password" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" class="inputBg fl"><div class="text-tx clear" id="password_notice"></div></div>
+
+                    <div class="f1"><span class="text-t fl">确认密码</span><input style="height:39px;" name="confirm_password" type="password" id="conform_password" onblur="check_conform_password(this.value);" class="inputBg fl"><div class="text-tx clear" id="conform_password_notice"></div></div>
+                    <!-- <div class="f1"><span class="text-t">邮 箱</span><input name="email" type="text" size="25" id="email" onblur="checkEmail(this.value);"  class="inputBg"><span class="text-tx" id="email_notice"></span></div> -->
+                    <div class="f1 yzm"><span class="text-t fl">验 证 码</span><input style="height:39px;width:136px;"  type="text" class="yzmin inputBg fl" size="8" name="captcha" id="yzmcode" value=""><img style="float:right;height:41px;position: static;" rc="captcha.php?1929691406" alt="captcha" onclick="this.src='captcha.php?'+Math.random()" class="yzmimg" id="yzmimg"><span class="text-tx clear" id="captcha_notice"></span></div>
+                    <div class="f1"><span class="text-t fl">手机</span><input style="height:39px;" name="extend_field5" type="text" size="25" id="extend_field5" class="inputBg fl" onblur="checkPhone(this.value);"><div class="text-tx clear" id="extend_field5_notice"></div>
+                    </div>
+                    <script>var mobile_field='';</script>
+                    <div class="f1"><span class="text-t fl">短信验证码</span><input  style="width:157px;height:39px;margin-right:3px;" name="mobile_code" id="mobile_code" type="text" size="6" class="inputBg smscod fl" onblur="vcodecheck();">
+                        <a id="zphone" onclick="sendSms();" class="sendcod">获取验证码</a>
+                        <span class="text-tx" id="mobile_code_notice"></span></div>
+                    <script>mobile_field='extend_field5';</script>
+                    <script type="text/javascript" src="sms.js"></script>
+
+
+
+
+                    <div class="f1 zcxy recheck" style="line-height:0;"><label><input style="padding:0;width:18px;height:13px;vertical-align: middle;border:none" type="checkbox" checked="checked" value="1" name="agreement">我已看过并接受《<a style="vertical-align: middle;color:rgb(0,0,238);" target="_blank"  href="article.php?cat_id=-1">用户协议</a>》</label></div>
+                    <input name="act" type="hidden" value="act_register">
+                    <input type="hidden" name="back_act" value="">
+                    <div class="f1"><input name="Submit" type="submit" value="立 即 注 册" class="ljzc-1" style="color:#fff;"></div>
+                </form>
+            </div>
+            <!--reg end-->
+
+        </div>
+
+    </div>
+    <!-- main end -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="wrap1200">
+            <div class="footer-logo"><img src="images/logo.png" width="183" height="35" class="logoimg"></div>
+            <div class="footer-nav">
+                <h3>站点导航</h3>
+                <a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a>
+            </div>
+            <div class="partner">
+                <h3>合作伙伴</h3>
+                <a href="#">小米（MI）</a><a href="#">微插座（atsmart）</a><a href="#">飞利浦（PHILIPS）</a><a href="#">海尔（Haier）</a><a
+                    href="#">欧瑞博（ORVIBO）</a><a href="#">物联传感（WuLian）</a>
+            </div>
+            <div class="help">
+                <div class="server">
+                    <h3>客户服务</h3>
+                    <a href="#">服务保障</a><a href="#">售后服务</a><a href="#">购物指南</a><a href="#">支付配送</a><a href="#">包邮政策</a><a
+                        href="#">常见问题</a>
+                </div>
+                <div class="tel"> 4008-128-116 <span>向未来生活跑步前进!</span></div>
+            </div>
+            <div class="copyright">
+                <div class="l">NX管家网 国内最专业的智能家居平台! 五年来一直为智能生活跑步前进不断努力着!<br/><a href="#">陕ICP备11007503号-1</a> \ Powered by ©
+                    2011-2016 NXguanjia.com
+                </div>
+                <div class="r"><a href="#">平台介绍</a>|<a href="#">加入我们</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end-->
+
+</div>
+
+<script>
+    //如果是IE浏览器，设置checkbox
+     if(navigator.userAgent.indexOf("MSIE") != -1) {
+         $(".check-all").css({"position":"relative","bottom":"2px"});
+         $(".search-input").css("height","29px");
+
+     }
+</script>
+
+<script type="text/javascript">
+        var process_request = "正在处理您的请求...";
+        var username_empty = "- 用户名不能为空。";
+        var username_shorter = "- 用户名长度不能少于 3 个字符。";
+        var username_invalid = "- 用户名只能是由字母数字以及下划线组成。";
+        var password_empty = "- 登录密码不能为空。";
+        var password_shorter = "- 登录密码不能少于 6 个字符。";
+        var confirm_password_invalid = "- 两次输入密码不一致";
+        var email_empty = "- Email 为空";
+        var email_invalid = "- Email 不是合法的地址";
+        var phone_empty = "- 手机号码不能为空";
+        var mobile_code_empty = "- 短信验证码不能为空";
+        var agreement = "- 您没有接受协议";
+        var msn_invalid = "- msn地址不是一个有效的邮件地址";
+        var qq_invalid = "- QQ号码不是一个有效的号码";
+        var home_phone_invalid = "- 家庭电话不是一个有效号码";
+        var office_phone_invalid = "- 办公电话不是一个有效号码";
+        var mobile_phone_invalid = "- 手机号码不是一个有效号码";
+        var msg_un_blank = "* 用户名不能为空";
+        var msg_un_length = "* 用户名最长不得超过7个汉字";
+        var msg_un_format = "* 用户名含有非法字符";
+        var msg_un_registered = "* 用户名已经存在,请重新输入";
+        var msg_can_rg = "* 可以注册";
+        var msg_email_blank = "* 邮件地址不能为空";
+        var msg_email_registered = "* 邮箱已存在,请重新输入";
+        var msg_email_format = "* 邮件地址不合法";
+        var msg_phone_blank = "* 手机号码不能为空";
+        var msg_phone_registered = "* 手机号码已存在,请重新输入";
+        var msg_phone_format = "* 手机号码不合法";
+        var msg_mcode_blank = "* 短信验证码不能为空";
+        var msg_blank = "不能为空";
+        var no_select_question = "- 您没有完成密码提示问题的操作";
+        var passwd_balnk = "- 密码中不能包含空格";
+        var username_exist = "用户名 %s 已经存在";
+    </script>
+<script>
+    $(document).ready(function () {
+    var shadowHeight = $("body").height();
+        $("#shadow").height(shadowHeight);
+
+        //login与reg弹出层居中定位
+        var windowWidth = document.documentElement.clientWidth;
+        var windowHeight = document.documentElement.clientHeight;
+        var loginHeight = $("#login").height();
+        var loginWidth = $("#login").width();
+        var regHeight = $("#reg").height();
+        var regWidth = $("#reg").width();
+        $("#login").css({
+            "position": "fixed",
+            "top": (windowHeight-loginHeight)/2,
+            "left": (windowWidth-loginWidth)/2
+        });
+        $("#reg").css({
+            "position": "fixed",
+            "top": (windowHeight-regHeight)/2,
+            "left": (windowWidth-regWidth)/2
+        });
+    $("#shadow").height(shadowHeight);
+    $(".closing").click(function(){
+         $("#login").css("display","block");
+         $("#shadow").css("display","block");
+
+    });
+    $("#shadow").click(function(){
+         $("#login").css("display","none");
+         $("#shadow").css("display","none");
+         $(".reg").css("display","none");
+
+    });
+     $("#login .t1  a").click(function(e){
+            e.preventDefault();
+         $("#login").css("display","none");
+         $("#reg").css("display","block");
+    });
+      $("#reg .t1  a").click(function(e){
+            e.preventDefault();
+         $("#login").css("display","block");
+         $("#reg").css("display","none");
+    });
+        //当tr的checkbox 单独全部选中时，全选框为选中状态
+
+        $(".check-one").click(function(){
+            allchk();
+        });
+        function allchk(){
+            var chknum = $(".check-one").size();//选项总个数
+            var chk = 0;
+            $(".check-one").each(function () {
+                if($(this).prop("checked")==true){
+                    chk++;
+                }
+            });
+            if(chknum==chk){//全选
+                $(".check-all").prop("checked",true);
+            }else{//不全选
+                $(".check-all").prop("checked",false);
+            }
+        }
+
+})
+
+</script>
+
+</body>
+</html>
+

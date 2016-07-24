@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NX管家-助您向未来生活跑步前进</title>
+<meta name="Keywords" content="NX管家 智能家居平台" />
+<meta name="Description" content="NX管家专业提供家庭智能化服务平台" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+<!-- header start -->
+  <div class="header-2">
+    <div class="wrap1200 wrap2">
+        <div class="logo"> <a href="/" class="logo-a"><img src="images/logo.png" width="240" height="46" alt="NX管家logo"/></a></div>
+    </div>
+  </div>
+  <!--header end --> 
+  <div class="main">
+    <div class="reg-login">
+      <div class="wrap1200">
+        <div class="reg" id="myreg">
+          <div class="t1"><span class="fl">欢迎光临</span> <span class="fr"><a href="">立即登录&gt;&gt;</a></span><div class="clear"></div></div>
+          <div class="f1"><span class="text-t">用 户 名</span><input type="text" class="" name=""><span class="text-tx"></span></div>
+          <div class="f1"><span class="text-t">设置密码</span><input type="password" class="" name=""></div>
+          <div class="f1"><span class="text-t">确认密码</span><input type="password" class="" name=""></div>
+          <div class="f1"><span class="text-t">邮 箱</span><input type="text" class="" name=""></div>
+          <div class="f1 yzm"><span class="text-t">验 证 码</span><input type="text" class="yzmin" name=""><img src="images/reg-yzm.jpg" class="yzmimg"></div>
+          <div class="f1"><span class="text-t">手 机 号</span><input type="text" onblur="checkPhone(this.value);" class="inputBg" id="extend_field5" size="25" name="extend_field5"><span id="extend_field5_notice" class="text-tx"></span>
+            </div>
+          <div class="f1"><span class="text-t">短信验证码</span><input type="text" onblur="vcodecheck();" class="inputBg smscod" size="6" id="mobile_code" name="mobile_code">
+            <a class="sendcod" onclick="sendSms();" id="zphone">获取验证码</a><span id="mobile_code_notice" class="text-tx"></span></div>
+          <div class="f1 zcxy"><label><input style="height:13px;width:18px;border:none;padding:0;position:relative;top:2px;line-height:25px;" type="checkbox" checked="checked" value="1" name="agreement">我已看过并接受《<a target="_blank" style="color:blue" href="article.php?cat_id=-1">用户协议</a>》</label></div>
+          <div class="f1"><input type="submit" class="ljzc-1" value="立 即 注 册" name=""></div>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <!-- main end --> 
+  <!-- footer -->  
+  <div class="footer-2">
+    <div class="wrap1200">
+      <div class="copyright">
+        <div>NX管家网 国内最专业的智能家居平台! 五年来一直为智能生活跑步前进不断努力着!<br/><a href="#">陕ICP备11007503号-1</a> \ Powered by © 2011-2016 NXguanjia.com </div>
+      
+      </div>
+    </div>
+  </div>
+  <!-- footer end-->
+<script>
+
+  //  //IE版本判断
+  var b_v = navigator.appVersion;
+  var IE6 = b_v.search(/MSIE 6/i) != -1;
+  var IE7 = b_v.search(/MSIE 7/i) != -1;
+  function a(){
+
+    if (IE7)
+    {
+      $("#myreg .f1 input").css({"position":"relative","top":"-1px"});
+      $("#myreg .sendcod").css({"position":"relative","top":"-15px"});
+    }else {
+    }
+
+  }
+  a();
+</script>
+</body>
+</html>

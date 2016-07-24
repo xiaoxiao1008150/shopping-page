@@ -1,0 +1,826 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>购物网站</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="Keywords" content="智能家居平台" />
+    <meta name="Description" content="专业提供家庭智能化服务平台" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<!-- header start -->
+<div id="shadow"></div>
+
+<div class="header">
+    <div class="header-top">
+        <div class="wrap1200 top"><a href="login.html">登陆</a>/<a href="reg.html">免费注册</a>|<a href="shopping-infor.html">我的订单</a>|<a href="">个人中心</a>|<a href="shopping-car.html">我的购物车</a></div>
+    </div>
+    <div class="wrap1200 wrap">
+        <!--//购物车详情-->
+        <div class="logo"><a href="/" class="logo-a"><img src="images/logo.png" width="240" height="46" alt="NX管家logo"/></a>
+        </div>
+        <div class="nav">
+            <ul>
+              <li><a href="index.html">首页</a></li>
+              <li><a href="product-list.html" class="on">产品</a></li>
+              <li><a href="news-list.html">资讯</a></li>
+              <li><a href="help-center.html">服务</a></li>
+              <li><a href="appraisal-list.html">测评</a></li>
+              <li><a href="about-us.html">社区</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="search-input">
+            <input type="image" src="images/search-magnifier.png" width="29" height="29" alt="Submit"
+                   class="search-but">
+        </div>
+        <!--//购物车详情-->
+
+    </div>
+</div>
+<!--header end -->
+<div class="main">
+
+    <div class="wrap1200" style="margin-bottom:20px;">
+        <!-- content begin -->
+        <div class="shopping_infor">
+            <div style="margin:20px 0">
+                当前位置: <a href="index.html">首页</a> <code>&gt;</code> 购物流程
+            </div>
+            <div class="process fr">
+                <div class="fr">
+                    <span class="process_1"></span>
+                    <span class="process_2"></span>
+                    <span class="process_3"></span>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <ul class="fr process_text">
+                <li>1.我的购物车</li>
+                <li> 2.填写并核对订单信息</li>
+                <li>3.成功提交订单</li>
+            </ul>
+            <div class="harvest_address">
+
+                    <span class="harspan_1 fl">收货地址</span>
+                    <div class="more_address fl">
+                        <p class="my_address">张三&nbsp15112344321 &nbsp&nbsp&nbsp陕西省 西安市 雁塔区 朱雀大街阳阳国际B座1900室
+                            &nbsp15112344321</p>
+                        <p class="before_address">李四&nbsp15112344321 &nbsp&nbsp&nbsp陕西省 西安市 雁塔区 朱雀大街阳阳国际B座1900室
+                            &nbsp15112344321</p>
+                        <p class="before_address">王五&nbsp15112344321 &nbsp&nbsp&nbsp陕西省 西安市 雁塔区 朱雀大街阳阳国际B座1900室
+                            &nbsp15112344321</p>
+                        <p class="before_address">张六&nbsp15112344321 &nbsp&nbsp&nbsp陕西省 西安市 雁塔区 朱雀大街阳阳国际B座1900室
+                            &nbsp15112344321</p>
+                    </div>
+
+                    <div class="clear"></div>
+
+                <span class="more old" style="margin-left:130px;">更多地址》</span>
+                <span class="more new" id="new">新增地址》</span>
+            </div>
+            <div class="pay">
+                <div style="margin-top:0;">
+                    <span class="harspan_1 fl">支付方式</span>
+                    <ul class="fl ">
+                        <li>货到付款</li>
+                        <li class="on">在线支付</li>
+                        <li>公司转账</li>
+                        <li>邮局汇款</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <span class="harspan_1 fl">配送方式 </span>
+                    <ul class="fl">
+                        <li class="on">快递运输</li>
+                        <li>由商家选择合作快递为您配送</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="div" style="position:relative">
+                    <span class="harspan_1 fl">发票信息</span>
+                    <ul class="fl posi">
+                        <li>不开发票</li>
+                        <li class="change" style="color:#98b6d1;">修改</li>
+                    </ul>
+                    <!--invoice information begin-->
+                        <div class="invoice_infor">
+                            <p>发票信息</p>
+
+                            <div style="margin-bottom:15px;"><span class="span_text active" id="comm_invoice">普通发票</span><span class="span_text" id="vat_invoice">增值税发票</span></div>
+                            <div class="normal_invoice">
+                                <form action="" id="invoice_infor_form"  method="post">
+
+                                <div style="overflow: auto;width:490px;">
+                                    <span style="width:56px;margin-right:15px;text-align:center;color:#878787"
+                                          class="fl">发票抬头</span>
+                                <ul class="fl" style="width:332px;max-height:200px;">
+                                    <li class="self">个人</li>
+                                    <!--<li id="last_li" ><input type="text" placeholder="新增单位发票抬头 "><span>保存   </span><div class="invoice_edit"><span>编辑</span><span>删除</span></div></li>-->
+                                    <li class="add_li"><span>新增单位发票</span></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div style="margin-top:20px;" class="invoice_content"><span
+                                    style="width:56px;margin-right:15px;text-align:center;display:inline-block;color:#878787">发票内容</span><span
+                                    class="span_text">明细</span><span class="span_text active">办公用品</span><span
+                                    class="span_text">电脑配件</span><span class="span_text"> 耗材</span></div>
+                            <div class="save" style="text-align: center;margin-top:40px;"><input class="btn-9" id="comm_button" type="submit" value="保存"><input class="input_cancle btn-9" type="text" value="取消"></div>
+                    </form>
+                            </div>
+                            <div class="tab-box">
+
+                                <div  style="display: block;">
+                                    <div class="prompt-box">
+                                        我公司依法开具发票，如您购买的商品按税法规定属于不得从增值税销项税额中抵扣的项目（例如集体福利或个人消费等），请您选择普通发票。<br>
+                                    </div>
+                                    <div class="form"  id="invoice_box">
+                                        <ul class="invoice-status">
+                                            <li class="fore1 curr" style="margin-right:0;">1.填写公司信息<b></b></li>
+                                            <li class="fore2 " style="  border:1px solid #ebebeb;">2.填写收票人信息<b></b></li>
+                                            <div class="clear"></div>
+                                        </ul>
+                                        <div class="steps">
+                                            <div class="step step1">
+                                                <div class="item">
+                                                    <span class="label"><em>*</em>单位名称：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt" id="company_name"   value="" >
+                                                        <span class="message"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="label"><em>*</em>纳税人识别码：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt" id="vat_code" value="">
+                                                        <span class="message"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item" >
+                                                    <span class="label"><em>*</em>注册地址：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt" id="vat_address" >
+                                                        <span class="message"></span>
+
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="label"><em>*</em>注册电话：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt" value="" id="vat_phone">
+                                                        <span class="message" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item" >
+                                                    <span class="label"><em>*</em>开户银行：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt"  value="" id="vat_bank">
+                                                        <span class=" message" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item" >
+                                                    <span class="label"><em>*</em>银行账户：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt" id="vat_bankAccount">
+                                                        <span class="message" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="label">&nbsp;</span>
+                                                    <div class="">
+                                                        <div >
+                                                            <input  type="button" class="btn-9"  value="下一步" id="next_input">
+                                                            <input  type="button" class="btn-9 cancel_1"  value="取消">
+                                                            <!--<button  class="btn-9"  id="next_input">下一步</button>-->
+                                                            <!--<button  class="btn-9 cancel_1">取消</button>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step step2 hide" style="margin-top:10px;">
+                                                <div class="item">
+                                                    <span class="label">发票内容：</span>
+                                                    <div class="fl">
+                                                        <div class="invoice-list">
+                                                            <ul>
+                                                                <li value="1" style="line-height:18px;cursor:pointer;height:18px;border:2px solid red;padding: 5px 8px;
+">明细<b></b>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden">
+                                                <div class="item" >
+                                                    <span class="label"><em>*</em>收票人姓名：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt"  value="" maxlength="20" id="consignee_name">
+                                                        <span class="message"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item" >
+                                                    <span class="label"><em>*</em>收票人手机：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt " id="consignee_mobile">
+                                                        <span class="message" ></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item" >
+                                                    <span class="label"><em>*</em>收票人省份：</span>
+                                                    <!--城市联动开始-->
+                                                    <div class="info invoice_info fl">
+                                                        <div>
+                                                            <select name="" id="" style="display:none;">
+                                                                <option value="">中国</option>
+                                                            </select>
+                                                            <select id="s_province" name="s_province"></select><select id="s_city" name="s_city" ></select><select id="s_county" name="s_county"></select>
+                                                            <span class="message" ></span>
+
+                                                            <script class="resources library" src="js/area.js" type="text/javascript"></script>
+                                                            <script type="text/javascript">_init_area();</script>
+                                                        </div>
+                                                        <div id="show"></div>
+                                                    </div>
+                                                    <!--城市联动结束-->
+                                                    <span ></span>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="label"><em>*</em>详细地址：</span>
+                                                    <div class="fl">
+                                                        <input type="text" class="itxt" id="consignee_address" >
+                                                        <span class="message" id="address_div_error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="label">&nbsp;</span>
+                                                    <div class="fl">
+                                                        <div class="op-btns">
+                                                            <a href="" class="btn-9"  id="save_invoice">保存</a>
+                                                            <a href="" class="btn-9 cancel_2" >取消</a>
+                                                            <a href=""  class="ftx-05" id="pre">返回上一步</a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--invoice information end-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="goods_information">
+                <div class="img fl" style="margin-right:49px;"><img src="images/goods1.png" alt=""></div>
+                <div class="fl">
+                    <p class="text_1">郎空超级空气净化器 KJFA500</p>
+                    <p>郎空超级空气净化器 KJFA500</p>
+                    <p style="margin-top:15px;"><span class="seven">7</span><span class="sever_day">7天无理由退货</span></p>
+                </div>
+                <div class="fl" style="margin-left:80px;">颜色：黑色超级净化版</div>
+                <p class="fr"><span class="text_2">￥699.00 </span><span style="font-size:14px;">X</span><span
+                        style="margin-right:55px;">1</span><span>有货</span></p>
+                <div class="clear"></div>
+            </div>
+            <div class="note">
+                <span class="">订单备注</span>
+                <input type="text" placeholder="限40字以内，请将购买需求在备注中详细说明。">
+                <span class="fr"><a href="shopping-infor.html">返回修改购物车</a></span>
+                <div>
+                    <div class="red_envelope">使用红包</div>
+
+                    <!--red_envelope begin-->
+                    <div id="red_envelope">
+                        <div>
+                            <div style="margin-bottom:20px;">
+                                <span style="margin-right:11px;">选择已有红包</span>
+                                <select>
+                                    <option value="">请选择：</option>
+                                </select>
+                            </div>
+
+                            <div><span style="margin-right:17px;">或输入序列号</span><input type="text" value="12345678">
+                            </div>
+                            <div style="position: absolute;top:10px;right:20px;">
+                                <div class="validate" style="margin-bottom:20px;">验证红包</div>
+                                <div class="validate active">验证红包</div>
+
+                            </div>
+                        </div>
+                        <!--red_envelope end-->
+                    </div>
+                </div>
+                <div class="fr detail">
+                    <div class="wrapper">
+                        <p><span>1件商品，总商品金额：</span><span class="last_span">￥699.00</span></p>
+                        <p><span>运 费：</span><span class="last_span">￥0.00</span></p>
+                        <p><span>红包金额：</span><span class="last_span">0.00</span></p>
+                        <p><span>应付总额：</span><span class="last_span">￥699.00</span></p>
+                    </div>
+                    <p class="payable"><span>应付金额</span><span class="pay_money">￥699.00</span><input type="submit"
+                                                                                                     value="提交订单"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="text_3">寄送至：陕西省西安市雁塔区朱雀大街阳阳国际B座1900室 <span>收货人：张三 15112344321</span></div>
+
+
+            <!--new_address begin-->
+            <form action="" id="new_address_form" method="post">
+                <div class="new_address" id="new_address">
+                    <p>新增收货人信息</p>
+                    <div><span>收货人：</span><input id="people" type="text"><span class="must">（必填）</span></div>
+                    <div><span>手机号码：</span><input id="telephone" type="text"><span class="must">（必填）</span></div>
+                    <div><span>固定电话：</span><input type="text"></div>
+                    <div><span>邮箱：</span><input type="text"></div>
+                    <div><span class="fl">配送至：</span>
+                        <div class="info fl" style="">
+                            <div>
+                                <select style="display:none;">
+                                    <option value="">中国</option>
+                                </select>
+                                <select id="s_province1" name="s_province1"></select><select id="s_city1"
+                                                                                           name="s_city1"></select><select
+                                    style="width:95px;" id="s_county1" name="s_county1"></select>
+                                <script class="resources library" src="js/area.js" type="text/javascript"></script>
+                                <script type="text/javascript">_init_area1();</script>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!--城市联动结束-->
+                    </div>
+                    <div style="margin-bottom:8px;"><span>详细地址：</span><input id="address" style="width:265px;"
+                                                                             type="text"></div>
+                    <span style="color:#fc0001;margin-left:68px;font-weight:600;">（必填）</span>
+                    <div class="save save1"><input class="active" type="submit" id="save" value="保存"><input type="text"
+                                                                                                      value="取消"></div>
+                </div>
+            </form>
+
+            <!-- main end -->
+
+
+        </div>
+    </div>
+</div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="wrap1200">
+            <div class="footer-logo"><img src="images/logo.png" width="183" height="35" class="logoimg"></div>
+            <div class="footer-nav">
+                <h3>站点导航</h3>
+                <a href="#">空气净化机</a><a href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a
+                    href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a><a
+                    href="#">智能指纹密码锁</a><a href="#">智能灯光控制</a><a href="#">智能蓝牙灯</a><a href="#">空气净化机</a>
+            </div>
+            <div class="partner">
+                <h3>合作伙伴</h3>
+                <a href="#">小米（MI）</a><a href="#">微插座（atsmart）</a><a href="#">飞利浦（PHILIPS）</a><a
+                    href="#">海尔（Haier）</a><a
+                    href="#">欧瑞博（ORVIBO）</a><a href="#">物联传感（WuLian）</a>
+            </div>
+            <div class="help">
+                <div class="server">
+                    <h3>客户服务</h3>
+                    <a href="#">服务保障</a><a href="#">售后服务</a><a href="#">购物指南</a><a href="#">支付配送</a><a href="#">包邮政策</a><a
+                        href="#">常见问题</a>
+                </div>
+                <div class="tel"> 4008-128-116 <span>向未来生活跑步前进!</span></div>
+            </div>
+            <div class="copyright">
+                <div class="l">NX管家网 国内最专业的智能家居平台! 五年来一直为智能生活跑步前进不断努力着!<br/><a href="#">陕ICP备11007503号-1</a> \ Powered
+                    by ©
+                    2011-2016 NXguanjia.com
+                </div>
+                <div class="r"><a href="#">平台介绍</a>|<a href="#">加入我们</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer end-->
+    <script>
+        //让IE兼容placehold
+        $(document).ready(function () {
+            var doc = document,
+                    inputs = doc.getElementsByTagName('input'),
+                    supportPlaceholder = 'placeholder' in doc.createElement('input'),
+
+                    placeholder = function (input) {
+                        var text = input.getAttribute('placeholder'),
+                                defaultValue = input.defaultValue;
+                        if (defaultValue == '') {
+                            input.value = text
+                        }
+                        input.onfocus = function () {
+                            if (input.value === text) {
+                                this.value = ''
+                            }
+                        };
+                        input.onblur = function () {
+                            if (input.value === '') {
+                                this.value = text
+                            }
+                        }
+                    };
+
+            if (!supportPlaceholder) {
+                for (var i = 0, len = inputs.length; i < len; i++) {
+                    var input = inputs[i],
+                            text = input.getAttribute('placeholder');
+                    if (input.type === 'text' && text) {
+                        placeholder(input)
+                    }
+                }
+            }
+        });
+
+
+    </script>
+    <!---->
+    <script>
+        $(document).ready(function () {
+            var shadowHeight = $("body").height();
+            $("#shadow").height(shadowHeight);
+            var windowWidth = document.documentElement.clientWidth;
+            var windowHeight = document.documentElement.clientHeight;
+            var $Height = $("#new_address").height();
+            var $Width = $("#new_address").width();
+
+
+            //设置新增地址的位置
+            $("#new_address").css({
+                "top": (windowHeight - $Height) / 2,
+                "left": (windowWidth - $Width) / 2
+            });
+            //设置新增地址点击  ，弹出框show
+            $("#new").click(function () {
+                $("#new_address").show();
+                $("#shadow").show();
+                $(".before_address").hide();
+
+            });
+            //设置新增地址点击  ，弹出框hide
+
+            $('#shadow,.save input[type=text]').click(function () {
+                $("#shadow").hide();
+                $("#new_address").hide();
+
+            });
+            //新增收货人信息必填项目的验证
+
+            $("#save").click(function () {
+                var a = $('#telephone').val();
+
+                if ($('#people').val() == "" || $('#address').val() == "" || a == "") {
+                    alert("必填项不能为空！");
+                    return false;
+
+                }
+                if (a !== "" && (!/^1[3|4|5|7|8]\d{9}$/.test(a))) {
+                    alert("电话号码填写不正确！");
+                    return false;
+
+                }
+
+            });
+
+            //单击页面除了发票弹出层之外的区域，弹出层隐藏
+            $('.change,.input_cancle,.cancel_1,.cancel_2,#comm_button').click(function (event) {
+                event.stopPropagation();
+                $('.invoice_infor').toggle();
+            });
+            $(document).click(function (event) {
+                var _con = $('.invoice_infor');
+                if (!_con.is(event.target) && _con.has(event.target).length === 0) {
+                    $('.invoice_infor').hide();
+                }
+            });
+
+            //发票信息页面切换
+            $(".invoice_infor div:eq(0) .span_text").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            $(".invoice_content .span_text").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            $(".validate").hover(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+
+            });
+
+            //支付方式，配送方式的切换
+            $(".pay ul:eq(0) li").hover(function () {
+                $(this).addClass("on").siblings().removeClass("on");
+
+            });
+
+            //新增收货人页面 保存与取消切换
+            $(".save1 input ").hover(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+
+            });
+
+            //单击页面除了红包弹出层之外的区域，弹出层隐藏
+            $('.red_envelope').click(function (event) {
+                event.stopPropagation();
+                $('#red_envelope').toggle();
+                return false;
+            });
+            $(document).click(function (event) {
+                var _con = $('#red_envelope');
+                if (!_con.is(event.target) && _con.has(event.target).length === 0) {
+                    $('#red_envelope').hide();
+                }
+            });
+     //点击更多地址，隐藏的地址出现
+            $(".more_address p").hover(function(){
+                $(this).css("background","rgba(204,204,204,0.20)");
+                $(this).css("filter","progid:DXImageTransform.Microsoft.gradient(startcolorstr=#3Bcccccc,endcolorstr=#3Bcccccc)");
+                var div = $("<div class='edit'><span>编辑</span><span class='address_delete'>删除</span></div>");
+                $(this).append(div);
+            },function () {
+                $(this).css("background","");
+                $(this).css("filter","");
+                //如果是IE浏览器
+                if (navigator.userAgent.indexOf("MSIE") != -1) {
+                    $(this).children('.edit').hide();
+                }else{
+                    $(this).children('.edit').hide();
+                }
+
+            });
+            //点击删除，该条地址删除
+
+            $(".address_delete").live('click',function () {
+                    if(confirm("确认要删除该地址吗？")){
+                        $(this).parents("p").remove();
+                        deleteItem();
+                    }
+            });
+            function deleteItem() {
+                var b = $('.more_address ').children('p').length;
+                if ( b == 0) {
+                    $(".more_address").html("<p style='height:28px;line-height:28px; '>请添加地址！</p>");
+                }
+            }
+
+            //更多地址出现的时候，文字变为隐藏地址
+            $(".old").click(function(){
+                if($(".before_address").css("display")=="none"){
+                    $(".before_address").show();
+                    $(".old").text("隐藏地址》");
+                }else{
+                    $(".before_address").hide();
+                    $(".old").text("更多地址》");
+
+                }
+            });
+        });
+
+        //如果是IE浏览器，设置checkbox
+        if (navigator.userAgent.indexOf("MSIE") != -1) {
+            $(".search-input").css("height", "29px");
+
+        }
+
+    </script>
+
+    <!--//-->
+    <script>
+        $(function() {
+            //点击新增单位发票，克隆
+            $(".add_li").on('click', function () {
+                $(".add_li").before('<li class="last_li" ><input type="text" placeholder="新增单位发票抬头 "><div class="invoice_edit"><span class="span1">编辑</span><span class="span_delete">删除</span></div><span class="span_save" >保存</span></li>');
+                $(this).hide();
+                $(this).siblings('.last_li').children('input').focus();
+            });
+
+//            点击保存，切换编辑和删除
+            $(".span_save").live('click', function () {
+                var inputValue = $(this).siblings('input').val();
+
+                if (inputValue == "") {
+                    alert("输入不能为空！");
+                    $(this).siblings('input').focus();
+                    return false;
+                }
+                else {
+                    $(this).hide();
+                    $(this).siblings('.invoice_edit').hide();
+                    $(this).siblings('input').css('border', '0px solid #fff').attr('readonly','true');
+                    $(this).parent().siblings('.add_li').show();
+                    $(this).parent().css("border", "1px solid #ccc");
+                    $(this).parent().addClass('test');
+
+                }
+            });
+//点击保存，验证输入项是否是空的
+            $('#comm_button').click(function(){
+                $('.last_li input').each(function(index,data){
+                   if($( data).val()== ""){
+                       alert("输入不能为空！");
+                       return false;
+                   }
+                });
+                return false;
+
+            });
+//             鼠标hover，编辑删除显示隐藏
+            $('.test ').live(
+                    {
+                        mouseenter: function () {
+                            $(this).find('.invoice_edit').show().children('.span1').show();
+                            //鼠标移入事件
+                        },
+                        mouseleave: function () {
+                            $(this).find('.invoice_edit').hide().children('.span1').hide();
+                            //鼠标移出事件
+                        }
+
+                    });
+                //li点击的时候，边框变为红色
+                    $(".last_li,.self").live('click', function() {
+                        $(this).css("border","2px solid red");
+                        $(this).siblings(':not(.add_li)').css("border","1px solid #ccc");
+
+                    });
+
+            //点击编辑，input聚焦
+            $(".span1").live('click', function() {
+                $(this).parent().siblings('input').removeAttr("readonly").focus().css("border","1px solid #ccc");
+                $(this).hide();
+                $(this).parent().siblings('.span_save').show();
+                $(this).parents('.last_li').removeClass('test');
+            });
+            //点击删除，此项li删除
+            $(".span_delete").live('click', function() {
+                if(confirm("确定删除吗")){
+                    $(this).parents('.last_li').siblings('.add_li').show();
+                    $(this).parents('.last_li').remove();
+                    return false;
+                }
+            });
+            });
+
+    </script>
+
+    <script>
+        $(function(){
+            $(".form  input").on('blur', function () {
+                var trueValue =  $(this).val().replace(/\s+/g,"");
+                var length = trueValue.length;
+
+                //验证单位名称
+                if ($(this).is('#company_name')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('单位名称不能为空！').addClass('error-msg')
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                                //验证纳税人识别码
+            
+                  if ($(this).is('#vat_code')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('纳税人识别号不能为空！').addClass('error-msg');
+
+
+                    }else if((trueValue != "" && length != 15) && (trueValue != "" && length != 18) && (trueValue != "" && length != 20)){
+                        $(this).siblings('.message').text('纳税人识别号错误，请检查！').addClass('error-msg');
+
+                    }
+                    else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                //验证注册地址
+                if ($(this).is('#vat_address')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('注册地址不能为空！').addClass('error-msg')
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                //验证注册电话
+                if ($(this).is('#vat_phone')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('注册电话不能为空！').addClass('error-msg')
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                //验证开户银行
+                if ($(this).is('#vat_bank')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('开户银行不能为空！').addClass('error-msg');
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                //验证银行账户
+                if ($(this).is('#vat_bankAccount')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('银行帐户不能为空！').addClass('error-msg');
+                    } else if((this.value).match(/[a-zA-Z]/g) !== null){
+                        $(this).siblings('.message').text('银行帐户含有非法字符！').addClass('error-msg');
+
+                    }
+                    else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+
+
+
+
+
+                // //验证收票人姓名
+                if ($(this).is('#consignee_name')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('请您填写收票人姓名').addClass('error-msg');
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                // //验证收票人手机
+                if ($(this).is('#consignee_mobile')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('请您填写收票人手机号码').addClass('error-msg');
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+
+                // //验证收票人地址
+                if ($(this).is('#consignee_address')) {
+                    if (trueValue == "") {
+                        $(this).siblings('.message').text('请您填写收票人详细地址').addClass('error-msg');
+                    } else {
+                        $(this).siblings('.message').text('').removeClass('error-msg');
+                    }
+                    return;
+                }
+                //点击下一步，公司与收票人切换
+
+                $("#next_input").on('click',function () {
+                    $(".step1 input").trigger('blur');
+                    var numError = $('.step1  .error-msg').length;
+                    if (numError) {
+                        $(".step1 .error-msg").show();
+                    }else{
+                        $('.step1').hide().siblings('.step2').show();
+                        $('.fore2').css('background','#ebebeb');
+                        $('.fore1').css('background','#fff');
+                    }
+                });
+                //点击保存，触发blur进行验证
+                $("#save_invoice").click(function () {
+                    $(".step2 input").trigger('blur');
+                    var numError = $('.step2  .error-msg').length;
+                    if (numError) {
+                        return false;
+                    }
+                });
+            });
+
+            //
+            //普通发票与增值税发票tab切换
+            $('#vat_invoice').click(function(){
+                $('.normal_invoice').hide().siblings('.tab-box').show();
+            });
+            $('#comm_invoice').click(function(){
+                $('.normal_invoice').show().siblings('.tab-box').hide();
+            });
+
+            //点击返回上一步，公司与收票人切换
+            $('#pre').click(function(){
+                $('.step1').show().siblings('.step2').hide();
+                $('.fore2').css('background','#fff');
+                $('.fore1').css('background','#ebebeb');
+                return false;
+            });
+
+        })
+    </script>
+    <!--//-->
+</body>
+</html>
+
